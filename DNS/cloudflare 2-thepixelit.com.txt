@@ -1,0 +1,56 @@
+;;
+;; Domain:     thepixelit.com.
+;; Exported:   2026-04-08 00:37:03
+;;
+;; This file is intended for use for informational and archival
+;; purposes ONLY and MUST be edited before use on a production
+;; DNS server.  In particular, you must:
+;;   -- update the SOA record with the correct authoritative name server
+;;   -- update the SOA record with the contact e-mail address information
+;;   -- update the NS record(s) with the authoritative name servers for this domain.
+;;
+;; For further information, please consult the BIND documentation
+;; located on the following website:
+;;
+;; http://www.isc.org/
+;;
+;; And RFC 1035:
+;;
+;; http://www.ietf.org/rfc/rfc1035.txt
+;;
+;; Please note that we do NOT offer technical support for any use
+;; of this zone data, the BIND name server, or any other third-party
+;; DNS software.
+;;
+;; Use at your own risk.
+;; SOA Record
+thepixelit.com	3600	IN	SOA	beth.ns.cloudflare.com. dns.cloudflare.com. 2052727522 10000 2400 604800 3600
+
+;; NS Records
+thepixelit.com.	86400	IN	NS	beth.ns.cloudflare.com.
+thepixelit.com.	86400	IN	NS	carlos.ns.cloudflare.com.
+
+;; A Records
+thepixelit.com.	1	IN	A	216.198.79.1 ; cf_tags=cf-proxied:false
+
+;; CNAME Records
+autodiscover.thepixelit.com.	1	IN	CNAME	autodiscover.outlook.com. ; cf_tags=cf-proxied:false
+_domainconnect.thepixelit.com.	1	IN	CNAME	_domainconnect.gd.domaincontrol.com. ; cf_tags=cf-proxied:true
+email.thepixelit.com.	1	IN	CNAME	email.secureserver.net. ; cf_tags=cf-proxied:false
+lyncdiscover.thepixelit.com.	1	IN	CNAME	webdir.online.lync.com. ; cf_tags=cf-proxied:false
+msoid.thepixelit.com.	1	IN	CNAME	clientconfig.microsoftonline-p.net. ; cf_tags=cf-proxied:false
+pay.thepixelit.com.	1	IN	CNAME	paylinks.commerce.godaddy.com. ; cf_tags=cf-proxied:true
+sip.thepixelit.com.	1	IN	CNAME	sipdir.online.lync.com. ; cf_tags=cf-proxied:false
+www.thepixelit.com.	1	IN	CNAME	90aa99760acb90fa.vercel-dns-017.com. ; cf_tags=cf-proxied:false
+
+;; MX Records
+thepixelit.com.	1	IN	MX	0 thepixelit-com.mail.protection.outlook.com.
+
+;; SRV Records
+_sipfederationtls._tcp.thepixelit.com.	1	IN	SRV	100 1 5061 sipfed.online.lync.com.
+_sip._tls.thepixelit.com.	1	IN	SRV	100 1 443 sipdir.online.lync.com.
+
+;; TXT Records
+_dmarc.thepixelit.com.	1	IN	TXT	"v=DMARC1; p=none; rua=mailto:c856016ffc824e7aa8ab624576bdeb8a@dmarc-reports.cloudflare.net"
+thepixelit.com.	1	IN	TXT	"v=spf1 include:secureserver.net -all"
+thepixelit.com.	1	IN	TXT	"NETORGFT17788302.onmicrosoft.com"
